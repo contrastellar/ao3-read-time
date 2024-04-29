@@ -13,8 +13,8 @@ ao3-read-time is a Firefox extension focused around one thing, and one thing onl
 ### Dependencies
 
 * [Mozilla Developer Docs, Web Extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
-* [`web-ext`](https://formulae.brew.sh/formula/web-ext#default) 7.11.0
-* 
+* [`web-ext`](https://github.com/mozilla/web-ext) 7.11.0
+* [Homebrew](https://brew.sh/) 4.2.20
 
 ### Installing
 
