@@ -10,9 +10,15 @@
   
     "content_scripts": [
       {
-        "matches": ["*://*.mozilla.org/*"],
+        "matches": ["*://*.archiveofourown.org/*"],
         "js": ["./src/ao3-read-time.js"]
       }
-    ]
+    ],
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "gabriella@contrastellar.com"
+        }
+    }
   
 }
