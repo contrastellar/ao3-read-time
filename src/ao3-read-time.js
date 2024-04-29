@@ -1,1 +1,4 @@
-document.body.style.border = "5px solid red";
+for(let statValueElement of document.querySelectorAll('dd.words')){
+    statValueElement.innerText = parseInt(statValueElement.innerText.replace(/,/g, ''));
+    console.log(statValueElement.innerText);
+}
