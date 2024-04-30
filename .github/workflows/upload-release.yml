@@ -1,0 +1,11 @@
+name: upload-release
+
+on:
+    release:
+        types: ["published"]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4.1.1
