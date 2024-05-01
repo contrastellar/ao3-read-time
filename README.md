@@ -4,15 +4,17 @@ A Firefox extension that is centered around showing the time it'll take to read 
 
 ## Description
 
-TODO
+ao3-read-time is a Firefox extension focused around one thing, and one thing only -- the ability to see how long it'll take you to read a fic, based *your* reading speed.
+
+
 
 ## Getting Started
 
 ### Dependencies
 
 * [Mozilla Developer Docs, Web Extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
-* `web-ext` 7.11.0
-* 
+* [`web-ext`](https://github.com/mozilla/web-ext) 7.11.0
+* [Homebrew](https://brew.sh/) 4.2.20
 
 ### Installing
 
