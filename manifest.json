@@ -1,18 +1,39 @@
 {
-
-    "description": "A Firefox extension that is centered around showing the time it'll take to read a fic, depending on the word count. ",
-    "manifest_version": 3,
     "name": "ao3-read-time",
+    "description": "A Firefox extension that is centered around showing the time it'll take to read a fic, depending on the word count. ",
+    "developer":{
+        "name": "Gabriella 'Contrastellar' Agathon",
+        "url": "https://github.com/contrastellar/ao3-read-time"
+    },
     "version": "0.1.0",
+    "version_name": "0.1.0 beta",
+    "author": "Gabriella 'Contrastellar' Agathon",
     "homepage_url": "https://github.com/contrastellar/ao3-read-time",
+    "manifest_version": 3,
+
+
     "icons": {
     },
-  
+
+
+    "host_permissions": [
+        "*://*.archiveofourown.org/*"
+    ],
+
+
     "content_scripts": [
       {
-        "matches": ["*://*.mozilla.org/*"],
+        "matches": ["*://*.archiveofourown.org/*"],
         "js": ["./src/ao3-read-time.js"]
       }
-    ]
+    ],
+
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "gabriella@contrastellar.com"
+        }
+    }
   
+
 }
