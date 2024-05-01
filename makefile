@@ -1,5 +1,5 @@
 nightly_path = /Applications/Firefox\ Nightly.app/Contents/MacOS/firefox 
-AO3_path = "https://archiveofourown.org"
+AO3_path = "https://archiveofourown.org/users/contrastellar/works"
 UNAME_S := $(shell uname -s)
 HOSTNAME := $(shell hostname)
 
