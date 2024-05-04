@@ -52,4 +52,4 @@ function main() {
 
 }
 
-main();
+window.addEventListener('load', main);
