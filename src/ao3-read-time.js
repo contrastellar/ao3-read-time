@@ -23,8 +23,12 @@ function calculateMinutesToRead(wordCount, wpm) {
     return wordCount / wpm;
 }
 
+/**
+ * The main function that executes the script.
+ * It calculates and adds a new 'Reading Time' element to AO3 listings.
+ */
 function main() {
-    var wpm = 500; // words per minute -- this needs to be able to be set by the user
+    var wpm = 500; // TODO this needs to be able to be set by the user
 
     var wordCountQuerySelector = document.querySelectorAll('dd.words');
 
@@ -35,19 +39,36 @@ function main() {
         let minutesToRead = calculateMinutesToRead(wordCount, wpm);
 
         // round the number of minutes to the nearest integer
-        let roundedMinutesToRead = Math.round(minutesToRead);
+        let roundedMinutesToRead = Math.floor(minutesToRead);
 
         // create new dt element to hold the time to read in minutes
         const dt = document.createElement('dt');
+        const dd = document.createElement('dd');
         // create new text node to hold the time to read in minutes
-        const node = document.createTextNode("Reading Time: " + roundedMinutesToRead.toString() + " minutes");
+        const node = document.createTextNode("Reading Time: ");
+        const node2 = document.createTextNode(roundedMinutesToRead + " minutes");
+
+        // add the relevant classes to the new dt and dd elements
+        dt.classList.add('chapters');
+        dd.classList.add('chapters');
 
         // append the new text node to the new dt element
         dt.appendChild(node);
+        dd.appendChild(node2);
+
+        // create a new div element to hold the new dt and dd elements
+        const div = document.createElement('div');
+
+        // add the relevant classes to the new div element
+        div.classList.add('chapters');
+
+        // append the new dt and dd element to the new div element
+        div.appendChild(dt);
+        div.appendChild(dd);
 
         // append the new dt element to the parent element of the word count
         // this is a dl element
-        wordCountElement.parentElement.appendChild(dt);
+        wordCountElement.parentElement.appendChild(div);
     };
 
 }
