@@ -3,7 +3,7 @@ AO3_path = "https://archiveofourown.org/users/contrastellar/works"
 UNAME_S := $(shell uname -s)
 HOSTNAME := $(shell hostname)
 
-VERSION := 0.1.1
+VERSION := 0.1.2
 
 run:
 ifeq ($(UNAME_S), Darwin)
