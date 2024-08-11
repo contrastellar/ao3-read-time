@@ -6,7 +6,7 @@
 /**
  * Removes commas from a word count and returns the integer value
  * @param {string} wordCount - The word count with commas
- * @returns {number} The integer value of the word count without commas
+ * @returns {string} The word count without commas, should be a string.
  */
 function removeCommas(wordCountInnerText){
     return wordCountInnerText.replace(/,/g, '');
@@ -23,13 +23,10 @@ function calculateMinutesToRead(wordCount, wpm) {
     return wordCount / wpm;
 }
 
-/**
- * The main function that executes the script.
- * It calculates and adds a new 'Reading Time' element to AO3 listings.
- */
-function main() {
+function run(){
     var wpm = 500; // TODO this needs to be able to be set by the user
 
+    // FIXME This isn't a great way of doing this
     var wordCountQuerySelector = document.querySelectorAll('dd.words');
 
     for(let wordCountElement of wordCountQuerySelector){
@@ -70,7 +67,14 @@ function main() {
         // this is a dl element
         wordCountElement.parentElement.appendChild(div);
     };
-
 }
 
-main();
+/**
+ * The main function that executes the script.
+ * It calculates and adds a new 'Reading Time' element to AO3 listings.
+ */
+console.log("function body is run");
+window.addEventListener("pageshow", (event) => {
+    console.log("listener is run?");
+    run();
+});
