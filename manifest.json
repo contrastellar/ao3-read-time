@@ -5,8 +5,7 @@
         "name": "Gabriella 'Contrastellar' Agathon",
         "url": "https://github.com/contrastellar/ao3-read-time"
     },
-    "version": "0.1.2",
-    "version_name": "0.1.1 alpha",
+    "version": "0.1.3",
     "author": "Gabriella 'Contrastellar' Agathon",
     "homepage_url": "https://github.com/contrastellar/ao3-read-time",
     "manifest_version": 3,
@@ -20,18 +19,22 @@
         "*://*.archiveofourown.org/*"
     ],
 
+    "background":{
+        "scripts": ["./src/ao3-read-time.js"]
+    },
 
     "content_scripts": [
       {
         "matches": ["*://*.archiveofourown.org/*"],
-        "js": ["./src/ao3-read-time.js"]
+        "js": ["./src/ao3-read-time.js"],
+        "run_at": "document_start"
       }
     ],
 
 
     "browser_specific_settings": {
         "gecko": {
-            "id": "gabriella@contrastellar.com"
+            "id": "ao3-read-time@contrastellar.com"
         }
     }
   
