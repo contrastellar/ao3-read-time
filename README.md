@@ -7,7 +7,6 @@ A Firefox extension that is centered around showing the time it'll take to read 
 ao3-read-time is a Firefox extension focused around one thing, and one thing only -- the ability to see how long it'll take you to read a fic, based *your* reading speed.
 
 
-
 ## Getting Started
 
 ### Dependencies
@@ -18,15 +17,16 @@ ao3-read-time is a Firefox extension focused around one thing, and one thing onl
 
 ### Installing
 
-TODO
+The addon can be installed in one primary method
 
-### Executing program
+1. addons.mozilla.org (Preferred Method)
+Navigate to [this site](https://addons.mozilla.org/en-US/firefox/addon/ao3-read-time) and simply install the addon!
 
-TODO
+[Releases] https://github.com/contrastellar/ao3-read-time/releases are provided as "benchmarks" of what code is compiled when, as I've yet to set up my own verification process for the addon.
 
 ## Help
 
-TODO
+If you need help, please feel free to make an [issue](https://github.com/contrastellar/ao3-read-time/issues) and I'll take a look as soon as possible!
 
 ## Version History
 
@@ -44,6 +44,5 @@ Any releases that are not version 1.0.0 will be considered "pre-release"
     * Beta Release
 
 ## License
+The License for this software is the `AGPL-3.0 License`, as found [here](https://github.com/contrastellar/ao3-read-time/blob/main/LICENSE)
 
-
-## Acknowledgments
